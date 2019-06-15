@@ -1,25 +1,22 @@
+// SUPER TAJNE CZITY :O
+// cards.forEach(function(card) {console.log(card.figure)})
 
-var cards = [
-  document.getElementById("card1"),
-  document.getElementById("card2"),
-  document.getElementById("card3"),
-  document.getElementById("card4"),
-  document.getElementById("card5"),
-  document.getElementById("card6"),
-  document.getElementById("card7"),
-  document.getElementById("card8"),
-  document.getElementById("card9"),
-  document.getElementById("card10"),
-  document.getElementById("card11"),
-  document.getElementById("card12")
-];
+var cardsBlock = document.getElementById("cards");
+var cards = []
+
+function startGame() {
+  if (cardCount.value => 2 && cardCount.value % 2 == 0) {
+    for (i = 1; i <= cardCount.value; i++) {
+      cardsBlock.innerHTML += "<div id='card" + i + "' class='card'></div>"
+      cards.push(document.getElementById("card" + i))
+    }
+    stopwatch();
+  }
+}
 
 var figures = [1,1,2,2,3,3,4,4,5,5,6,6];
 
-cards.forEach(startGame);
-
-// SUPER TAJNE CZITY :O
-// cards.forEach(function(card) {console.log(card.figure)})
+cards.forEach(createCard);
 
 var timer = document.getElementById("timer");
 timer.innerHTML = "00:00";
@@ -42,12 +39,10 @@ function stopwatch() {
   }
 }
 
-stopwatch();
-
 var movesCounter = document.getElementById("moves");
 movesCounter.innerHTML = "0";
 
-function startGame(card) {
+function createCard(card) {
   card.addEventListener("click", openCard);
   figureIndex = Math.floor(Math.random() * figures.length);
   card.figure = figures[figureIndex];
