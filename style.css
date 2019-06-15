@@ -17,7 +17,7 @@ border-radius: 5px;
 
 .figure1
 {
-background-color:#ff8080;
+background-image: url("/home/kacper/Pulpit/Gierka/img/SmallSpitter.gif") -150px - 50px;
 }
 
 .figure2
@@ -42,5 +42,5 @@ background-color:#663300;
 
 .figure6
 {
-background-color:#003300; 
+background-color:#003300
 }
