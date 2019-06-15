@@ -14,8 +14,6 @@ function startGame() {
     }
     for (i = 1; i <= cardCount; i++) {
     cards.push(document.getElementById("card" + i));
-    figures.push(i);
-    figures.push(i);
     }
     for (i = 1; i <= cardCount / 2; i++) {
     figures.push(i);
