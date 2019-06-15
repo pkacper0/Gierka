@@ -17,6 +17,10 @@ function startGame() {
     figures.push(i);
     figures.push(i);
     }
+    for (i = 1; i <= cardCount / 2; i++) {
+    figures.push(i);
+    figures.push(i);
+    }
     cards.forEach(createCard);
     stopwatch();
     document.getElementById("startScreen").innerHTML = ""
