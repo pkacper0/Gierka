@@ -2,21 +2,33 @@
 // cards.forEach(function(card) {console.log(card.figure)})
 
 var cardsBlock = document.getElementById("cards");
-var cards = []
+var cards = [];
+var figures = [];
+var cardCount = 0;
 
 function startGame() {
-  if (cardCount.value => 2 && cardCount.value % 2 == 0) {
-    for (i = 1; i <= cardCount.value; i++) {
-      cardsBlock.innerHTML += "<div id='card" + i + "' class='card'></div>"
-      cards.push(document.getElementById("card" + i))
+  cardCount = document.getElementById("cardCountInput").value
+  if (cardCount >= 2 && (cardCount % 2) == 0) {
+    for (i = 1; i <= cardCount; i++) {
+      cardsBlock.innerHTML += "<div id='card" + i + "' class='card'></div>";
     }
+    for (i = 1; i <= cardCount; i++) {
+    cards.push(document.getElementById("card" + i));
+    figures.push(i);
+    figures.push(i);
+    }
+    cards.forEach(createCard);
     stopwatch();
+    document.getElementById("startScreen").innerHTML = ""
   }
 }
 
-var figures = [1,1,2,2,3,3,4,4,5,5,6,6];
-
-cards.forEach(createCard);
+function createCard(card) {
+  card.addEventListener("click", openCard);
+  figureIndex = Math.floor(Math.random() * figures.length);
+  card.figure = figures[figureIndex];
+  figures.splice(figureIndex, 1);
+}
 
 var timer = document.getElementById("timer");
 timer.innerHTML = "00:00";
@@ -42,13 +54,6 @@ function stopwatch() {
 var movesCounter = document.getElementById("moves");
 movesCounter.innerHTML = "0";
 
-function createCard(card) {
-  card.addEventListener("click", openCard);
-  figureIndex = Math.floor(Math.random() * figures.length);
-  card.figure = figures[figureIndex];
-  figures.splice(figureIndex, 1);
-}
-
 var openCards = [];
 var foundPairs = 0;
 var moves = 0;
@@ -66,7 +71,7 @@ function openCard(event) {
       if (openCards[0].figure == openCards[1].figure) {
         foundPairs++;
         openCards = []
-        if (foundPairs >= 6) {
+        if (foundPairs >= cardCount / 2) {
           timer.stop = true
         }
       } else {
