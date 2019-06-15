@@ -19,9 +19,11 @@ var cards = [
 cards.forEach(addListeners);
 
 function addListeners(value) {
-  value.addEventListener("onclick", openCard);
+  value.addEventListener("click", openCard);
 }
 
-function openCard() {
-  alert("Kliknięto kartę!");
+function openCard(event) {
+  card = event.target;
+  alert("Kliknięto kartę " + card.id + "!");
+  card.style.backgroundColor = "white"
 }
