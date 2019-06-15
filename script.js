@@ -14,16 +14,48 @@ var cards = [
   document.getElementById("card12")
 ];
 
-//document.getElementById("card5").addEventListener("click", openCard);
+figures = [1,1,2,2,3,3,4,4,5,5,6,6];
 
-cards.forEach(addListeners);
+cards.forEach(startGame);
 
-function addListeners(value) {
-  value.addEventListener("click", openCard);
+// SUPER TAJNE CZITY :O
+// cards.forEach(function(card) {console.log(card.figure)})
+
+function startGame(card) {
+  card.addEventListener("click", openCard);
+  figureIndex = Math.floor(Math.random() * figures.length);
+  card.figure = figures[figureIndex];
+  figures.splice(figureIndex, 1);
 }
 
+var openCards = [];
+
 function openCard(event) {
-  card = event.target;
-  alert("Kliknięto kartę " + card.id + "!");
-  card.style.backgroundColor = "white"
+  console.log("klik")
+  if (openCards.length < 2) {
+    card = event.target;
+    card.classList.add("openCard");
+    card.classList.add("figure" + card.figure);
+    card.removeEventListener("click", openCard);
+    openCards.push(card);
+    if (openCards.length == 2) {
+      console.log("Odkryto dwie karty!");
+      if (openCards[0].figure == openCards[1].figure) {
+        console.log("Znaleziono parę!");
+        openCards = []
+      } else {
+        console.log("Nie znaleziono pary!");
+        setTimeout(closeCards, 1000);
+      }
+    }
+  }
+}
+
+function closeCards() {
+  openCards.forEach(function(card) {
+    card.classList.remove("openCard");
+    card.classList.remove("figure" + card.figure);
+    card.addEventListener("click", openCard);
+  });
+  openCards = []
 }
