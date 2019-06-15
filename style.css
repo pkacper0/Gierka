@@ -17,7 +17,10 @@ border-radius: 5px;
 
 .figure1
 {
-background-image: url("img/SmallSpitter.gif");
+  background-image: url("img/SmallSpitter.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .figure2
