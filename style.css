@@ -17,6 +17,7 @@ border-radius: 5px;
 
 .figure1
 {
+  background-color: #ffb3b3;
   background-image: url("img/SmallSpitter.gif");
   background-position: center;
   background-repeat: no-repeat;
@@ -25,25 +26,45 @@ border-radius: 5px;
 
 .figure2
 {
-background-color:#1a1aff;
+  background-color: #ffff4d;
+  background-image: url("img/banan.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
 }
 
 .figure3
 {
-background-color:#339966;
+  background-color: #6c6c65;
+  background-image: url("img/mario.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .figure4
 {
-background-color:#ff9900;
+  background-color: #4dff4d;
+  background-image: url("img/homer.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .figure5
 {
-background-color:#663300;
+  background-color: #9999ff;
+  background-image: url("img/Bob.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .figure6
 {
-background-color:#003300
+  background-image: url("img/zembata.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
