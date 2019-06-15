@@ -35,10 +35,10 @@ function pad(number, length) {
 }
 
 function stopwatch() {
-  time++;
-  timer.innerHTML = pad(Math.floor(time / 60), 2) + ":" + pad(time % 60, 2);
   if(timer.stop != true) {
     setTimeout(stopwatch, 1000);
+    time++;
+    timer.innerHTML = pad(Math.floor(time / 60), 2) + ":" + pad(time % 60, 2);
   }
 }
 
