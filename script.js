@@ -1,25 +1,34 @@
-
-var cards = [
-  document.getElementById("card1"),
-  document.getElementById("card2"),
-  document.getElementById("card3"),
-  document.getElementById("card4"),
-  document.getElementById("card5"),
-  document.getElementById("card6"),
-  document.getElementById("card7"),
-  document.getElementById("card8"),
-  document.getElementById("card9"),
-  document.getElementById("card10"),
-  document.getElementById("card11"),
-  document.getElementById("card12")
-];
-
-var figures = [1,1,2,2,3,3,4,4,5,5,6,6];
-
-cards.forEach(startGame);
-
 // SUPER TAJNE CZITY :O
 // cards.forEach(function(card) {console.log(card.figure)})
+
+var cardsBlock = document.getElementById("cards");
+var cards = [];
+var figures = [];
+var cardCount = 0;
+
+function startGame() {
+  cardCount = document.getElementById("cardCountInput").value
+  if (cardCount >= 2 && (cardCount % 2) == 0) {
+    for (i = 1; i <= cardCount; i++) {
+      cardsBlock.innerHTML += "<div id='card" + i + "' class='card'></div>";
+    }
+    for (i = 1; i <= cardCount; i++) {
+    cards.push(document.getElementById("card" + i));
+    figures.push(i);
+    figures.push(i);
+    }
+    cards.forEach(createCard);
+    stopwatch();
+    document.getElementById("startScreen").innerHTML = ""
+  }
+}
+
+function createCard(card) {
+  card.addEventListener("click", openCard);
+  figureIndex = Math.floor(Math.random() * figures.length);
+  card.figure = figures[figureIndex];
+  figures.splice(figureIndex, 1);
+}
 
 var timer = document.getElementById("timer");
 timer.innerHTML = "00:00";
@@ -42,17 +51,8 @@ function stopwatch() {
   }
 }
 
-stopwatch();
-
 var movesCounter = document.getElementById("moves");
 movesCounter.innerHTML = "0";
-
-function startGame(card) {
-  card.addEventListener("click", openCard);
-  figureIndex = Math.floor(Math.random() * figures.length);
-  card.figure = figures[figureIndex];
-  figures.splice(figureIndex, 1);
-}
 
 var openCards = [];
 var foundPairs = 0;
@@ -71,7 +71,7 @@ function openCard(event) {
       if (openCards[0].figure == openCards[1].figure) {
         foundPairs++;
         openCards = []
-        if (foundPairs >= 6) {
+        if (foundPairs >= cardCount / 2) {
           timer.stop = true
         }
       } else {
