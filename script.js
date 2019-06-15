@@ -1,5 +1,5 @@
 
-cards = [
+var cards = [
   document.getElementById("card1"),
   document.getElementById("card2"),
   document.getElementById("card3"),
@@ -13,6 +13,8 @@ cards = [
   document.getElementById("card11"),
   document.getElementById("card12")
 ];
+
+//document.getElementById("card5").addEventListener("click", openCard);
 
 cards.forEach(addListeners);
 
