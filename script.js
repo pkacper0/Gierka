@@ -14,12 +14,38 @@ var cards = [
   document.getElementById("card12")
 ];
 
-figures = [1,1,2,2,3,3,4,4,5,5,6,6];
+var figures = [1,1,2,2,3,3,4,4,5,5,6,6];
 
 cards.forEach(startGame);
 
 // SUPER TAJNE CZITY :O
 // cards.forEach(function(card) {console.log(card.figure)})
+
+var timer = document.getElementById("timer");
+timer.innerHTML = "00:00";
+
+var time = -1;
+
+function pad(number, length) {
+    var str = '' + number;
+    while (str.length < length) {
+        str = '0' + str;
+    }
+    return str;
+}
+
+function stopwatch() {
+  time++;
+  timer.innerHTML = pad(Math.floor(time / 60), 2) + ":" + pad(time % 60, 2);
+  if(timer.stop != true) {
+    setTimeout(stopwatch, 1000);
+  }
+}
+
+stopwatch();
+
+var movesCounter = document.getElementById("moves");
+movesCounter.innerHTML = "0";
 
 function startGame(card) {
   card.addEventListener("click", openCard);
@@ -29,9 +55,10 @@ function startGame(card) {
 }
 
 var openCards = [];
+var foundPairs = 0;
+var moves = 0;
 
 function openCard(event) {
-  console.log("klik")
   if (openCards.length < 2) {
     card = event.target;
     card.classList.add("openCard");
@@ -39,12 +66,15 @@ function openCard(event) {
     card.removeEventListener("click", openCard);
     openCards.push(card);
     if (openCards.length == 2) {
-      console.log("Odkryto dwie karty!");
+      moves++;
+      movesCounter.innerHTML = moves;
       if (openCards[0].figure == openCards[1].figure) {
-        console.log("Znaleziono parę!");
+        foundPairs++;
         openCards = []
+        if (foundPairs >= 6) {
+          timer.stop = true
+        }
       } else {
-        console.log("Nie znaleziono pary!");
         setTimeout(closeCards, 1000);
       }
     }
