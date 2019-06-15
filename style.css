@@ -18,7 +18,7 @@ border-radius: 5px;
 .figure1
 {
   background-color: #ffb3b3;
-  background-image: url("img/SmallSpitter.gif");
+  background-image: url("img/animu.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -27,7 +27,7 @@ border-radius: 5px;
 .figure2
 {
   background-color: #ffff4d;
-  background-image: url("img/animu.gif");
+  background-image: url("img/armata.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -37,7 +37,7 @@ border-radius: 5px;
 .figure3
 {
   background-color: #6c6c65;
-  background-image: url("img/hops.gif");
+  background-image: url("img/banan.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -46,7 +46,7 @@ border-radius: 5px;
 .figure4
 {
   background-color: #4dff4d;
-  background-image: url("img/homer.gif");
+  background-image: url("img/Bob.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -55,7 +55,7 @@ border-radius: 5px;
 .figure5
 {
   background-color: #9999ff;
-  background-image: url("img/Bob.gif");
+  background-image: url("img/deszcz.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -63,6 +63,81 @@ border-radius: 5px;
 
 .figure6
 {
+  background-image: url("img/fortnite.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.figure7
+{
+  background-color: #ffb3b3;
+  background-image: url("img/homer.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.figure8
+{
+  background-color: #ffb3b3;
+  background-image: url("img/hops.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.figure9
+{
+  background-color: #ffb3b3;
+  background-image: url("img/króliki.gif");
+
+}
+
+.figure10
+{
+  background-color: #ffb3b3;
+  background-image: url("img/kucyk.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.figure11
+{
+  background-color: #ffb3b3;
+  background-image: url("img/lisek.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.figure12
+{
+  background-color: #ffb3b3;
+  background-image: url("img/mario.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.figure13
+{
+  background-color: #ffb3b3;
+  background-image: url("img/SmallSpitter.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.figure14
+{
+  background-color: #ffb3b3;
+  background-image: url("img/taniec.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.figure15
+{
+  background-color: #ffb3b3;
   background-image: url("img/zembata.gif");
   background-position: center;
   background-repeat: no-repeat;
