@@ -2,25 +2,48 @@
 <html>
 
   <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e145cebe63.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
 
   <body>
-    <div id="container">
-
-      <div id="Header">
-        <h1><center><!-- <--- To środkowanie by musiało być w css a nie tutaj--><br>Gra pamięciowa</h1>
+      <div id="header">
+        <h1>Gra pamięciowa</h1>
       </div>
 
-      <div id="memory-game">
-        <script src="memory-game/memory-game.js"></script>
-      </div>
-      <!-- Tak nie wolmo! :D <body color ="yellow">-->
+      <div class="container">
+        <div class="row">
+            <div class="col-md-4 site-block">
+                <h1>O grze:</h1>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate nec nisl nec pretium. Quisque vel dignissim est. Nullam vel leo aliquet, tempus nunc vel, convallis velit. Praesent sit amet mollis ex. Maecenas lorem leo, pretium ut quam sed, porttitor rutrum diam. Aenean tincidunt quam neque, vitae porttitor lorem lacinia a. Phasellus enim sem, dapibus sed orci at, lobortis gravida purus. Pellentesque pellentesque nisi ut velit ullamcorper, vehicula vestibulum nisl bibendum.
+            </div>
 
-    </div>
+            <div id="memory-game" class="col-md-8 site-block">
+              <script src="memory-game/memory-game.js"></script>
+              <div id="startScreen">
+                <h1>Wybierz ilość kart i naciśnij przycisk!</h1>
+                <div class="input-group">
+                  <input id="cardCountInput" class="form-control-lg"></input>
+                  <span class="input-group-btn" id="start-button">
+                    <button id="startGame" class="btn btn-primary btn-lg">Rozpocznij grę!</button>
+                  </span>
+                </div>
+              </div>
+              <div id="gameScreen">
+                <div id="stopwatchBlock"><h4>Twój czas: <span id="stopwatchCounter"></span></h4></div>
+                <div id="movesBlock"><h4>Liczba ruchów: <span id="movesCounter"></span></h4></div>
+              </div>
+              <div id="endScreen">
+                <h1>Gratulacje!</h1>
+                <h3>Twój czas to: <span id="stopwatchResult"></span>!</h3>
+                <h3>Zrobiłeś <span id="movesResult"></span> ruchów!</h3>
+                <button id="restartGame" class="btn btn-primary btn-lg">Spróbuj ponownie!</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
   </body>
 </html>

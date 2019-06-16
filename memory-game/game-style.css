@@ -9,6 +9,7 @@ height: 200px;
 width: 100px;
 border: 2px solid black;
 border-radius: 5px;
+margin: 5px;
 }
 
 .openCard

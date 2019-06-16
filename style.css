@@ -2,13 +2,45 @@
 
 body
 {
-  background-color: #707070;
+  background-color: #424242;
   font-family: 'Open Sans', sans-serif;
+  color: white;
 }
 
-#Header
+#header
 {
   height: 100px;
   width: auto;
-  background-color: 00FF00;
+  margin: 50px;
+  text-align: center;
+}
+
+#header h1
+{
+  font-size: 56px;
+}
+
+.site-block
+{
+  text-align: center;
+  margin: 40px 0px 40px 0px;
+}
+
+#memory-game
+{
+  height: 100%;
+}
+
+#cardCountInput
+{
+  margin: 5px;
+  margin-left: auto;
+  height: 50px;
+}
+
+#start-button
+{
+  margin: 5px;
+  margin-right: auto;
+  height: 50px;
 }
