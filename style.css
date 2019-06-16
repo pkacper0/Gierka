@@ -1,3 +1,14 @@
+#Header
+{
+height: 100px;
+width:auto;
+background-color:00FF00 ;
+
+
+
+}
+
+
 .card
 {
 background-color:#66ff8c;
@@ -9,6 +20,7 @@ border: 2px solid black;
 border-radius: 5px;
 
 }
+
 
 .openCard
 {
@@ -89,7 +101,7 @@ border-radius: 5px;
 .figure9
 {
   background-color: #ffb3b3;
-  background-image: url("img/króliki.gif");
+  background-image: url("img/króliki.gif"), url("img/trawa.jpeg");
 
 }
 
