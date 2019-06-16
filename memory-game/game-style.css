@@ -1,0 +1,110 @@
+/* Tutaj będzie wygląd gry */
+
+.card
+{
+background-color:#66ff8c;
+color:#000000;
+display: inline-block;
+height: 200px;
+width: 100px;
+border: 2px solid black;
+border-radius: 5px;
+}
+
+.openCard
+{
+  background-color: #FFF;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.figure1
+{
+  background-color: #ffb3b3;
+  background-image: url("img/animu.gif");
+}
+
+.figure2
+{
+  background-color: #ffff4d;
+  background-image: url("img/armata.gif");
+}
+
+.figure3
+{
+  background-color: #6c6c65;
+  background-image: url("img/banan.gif");
+}
+
+.figure4
+{
+  background-color: #4dff4d;
+  background-image: url("img/Bob.gif");
+}
+
+.figure5
+{
+  background-color: #9999ff;
+  background-image: url("img/deszcz.gif");
+}
+
+.figure6
+{
+  background-image: url("img/fortnite.gif");
+}
+
+.figure7
+{
+  background-color: #ffb3b3;
+  background-image: url("img/homer.gif");
+}
+
+.figure8
+{
+  background-color: #ffb3b3;
+  background-image: url("img/hops.gif");
+}
+
+.figure9
+{
+  background-color: #ffb3b3;
+  background-image: url("img/króliki.gif"), url("img/trawa.jpeg");
+  background-size: auto;
+}
+
+.figure10
+{
+  background-color: #ffb3b3;
+  background-image: url("img/kucyk.gif");
+}
+
+.figure11
+{
+  background-color: #ffb3b3;
+  background-image: url("img/lisek.gif");
+}
+
+.figure12
+{
+  background-color: #ffb3b3;
+  background-image: url("img/mario.gif");
+}
+
+.figure13
+{
+  background-color: #ffb3b3;
+  background-image: url("img/SmallSpitter.gif");
+}
+
+.figure14
+{
+  background-color: #ffb3b3;
+  background-image: url("img/taniec.gif");
+}
+
+.figure15
+{
+  background-color: #ffb3b3;
+  background-image: url("img/zembata.gif");
+}
