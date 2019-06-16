@@ -1,26 +1,23 @@
+<!DOCTYPE html>
+<html>
 
-<link rel="stylesheet" type="text/css" href="style.css">
-<div id="container">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
 
+  <body>
+    <div id="container">
 
+      <div id="Header">
+        <h1><center><!-- <--- To środkowanie by musiało być w css a nie tutaj--><br>Gra pamięciowa</h1>
+      </div>
 
-<div id="Header">
-<h1><center><br>Gra pamięciowa</h1>
-  </div>
+      <div id="memory-game">
+        <script src="memory-game/memory-game.js"></script>
+      </div>
+      <!-- Tak nie wolmo! :D <body color ="yellow">-->
 
-<h1 id="timer"></h1>
-<h1>Liczba ruchów: <span id="moves"></span></h1>
+    </div>
 
-<div id="startScreen">
-  <input type="number" id="cardCountInput" min="6" max="30" step="2" value="12">
-  <button onclick="startGame()">Start</button>
-</div>
-
-
-<div id="cards"></div>
-
-<script src="script.js"></script>
-<body color ="yellow">
-
-
-</div>
+  </body>
+</html>
